@@ -1,0 +1,28 @@
+/* Change the text of all paragraphs and headers with javascript
+Note:The html must not be changed */
+
+let header1 = document.getElementById("myTitle")
+
+header1.innerText = '';
+header1.innerText = 'This is changed';
+
+let lastDiv = document.getElementsByTagName("body")[0].lastElementChild;
+let lastHeader = lastDiv.getElementsByTagName("h3")[0];
+
+lastHeader.innerText = '';
+lastHeader.innerText = 'This is also changed';
+
+let headerOne = lastHeader.previousElementSibling
+
+headerOne.innerText = '';
+headerOne.innerText = 'This is changed too.'
+
+let paragraphsIn = document.getElementsByClassName("paragraph")[0];
+
+paragraphsIn.innerText = '';
+paragraphsIn.innerText = 'This paragraph is changed';
+
+let paragraphTwo = document.getElementsByClassName("paragraph second")[0];
+
+paragraphTwo.innerText = '';
+paragraphTwo.innerText = 'Also this one';
